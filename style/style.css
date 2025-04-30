@@ -166,10 +166,12 @@ a {
 
 .previous::before {
     content: "← ";
+    box-sizing: border-box;
 }
 
 .next::after {
     content: " →";
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: 480px) {
