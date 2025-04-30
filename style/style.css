@@ -1,11 +1,10 @@
 body {
     font-family: 'Palatino', serif;
     margin: 0;
-    padding: 1em 8% 1em 8%;
+    padding: 1em 15% 1em 20%;
     box-sizing: border-box;
     background-color: #eae0d5;
     color: #0a0908;
-    size: 12px;
 }
 
 /* HEX CODES:
@@ -87,32 +86,17 @@ a {
     color: #0a0908;
 }
 
-.gallery {
-    max-width: 100%;
-    align-items: center;
-}
-
-.gallery > img {
-    margin: 1em 0 0;
-    width: 400px;
-    border-style: solid;
-    border-width: 2px;
-    max-width: 100%;
-}
-
-.gallery > p {
-    font-size: 14px;
-}
-
-#sketches {
-    width: 250px;
-    border-style: solid;
-    border-width: 2px;
-}
-
 .container {
     height: 100%;
     max-width: 100%;
+    box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+/* Container for the navigation buttons - ensures they stay within content area */
+.nav-buttons-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
 }
 
 .horizontal-line {
@@ -120,8 +104,42 @@ a {
     display: block;
     width: 100%; 
     height: 2px; 
+    box-sizing: border-box;
     background-color: #0a0908;
     margin: 20px 0 10px 0; 
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    position: relative;
+}
+
+.nav-button {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    box-sizing: border-box;
+}
+
+.nav-button:hover {
+    color: #0077cc;
+}
+
+.previous::before {
+    content: "← ";
+}
+
+.next::after {
+    content: " →";
 }
 
 @media screen and (min-width: 480px) {
@@ -132,6 +150,12 @@ a {
 
     .container, #body {
         max-width: 70%;
+    }
+    
+    /* Ensure nav container matches other containers in responsive layout */
+    .nav-container {
+        width: 100%;
+        max-width: 100%;
     }
 
     footer {
