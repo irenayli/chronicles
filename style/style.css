@@ -1,7 +1,8 @@
 body {
     font-family: 'Palatino', serif;
-    margin: 0;
-    padding: 1em 20% 1em 20%;
+    margin: auto;
+    padding: 1em;
+    max-width: 80ch;
     box-sizing: border-box;
     background-color: #eae0d5;
     color: #0a0908;
@@ -30,9 +31,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
-    height: 130px;
+    margin-bottom: 1em;
     background-color: #eae0d5;
-    padding-bottom: 25px;
 }
 
 h1 {
@@ -62,13 +62,6 @@ ul {
 ol {
     line-height: 20px;
     line-height: 1.2;
-}
-
-.about,
-.work, 
-.contact {
-    max-width: 600px;
-    margin: 20px auto;
 }
 
 section {
