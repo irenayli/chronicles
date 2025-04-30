@@ -1,7 +1,7 @@
 body {
     font-family: 'Palatino', serif;
     margin: 0;
-    padding: 1em 15% 1em 15%; /* Increased padding for narrower content area */
+    padding: 1em 15% 1em 20%;
     box-sizing: border-box;
     background-color: #eae0d5;
     color: #0a0908;
@@ -90,14 +90,6 @@ a {
     height: 100%;
     max-width: 100%;
     box-sizing: border-box; /* Ensure consistent box sizing */
-    position: relative; /* Enable positioning context */
-}
-
-/* Ensure consistent container behavior */
-.content-wrapper {
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
 }
 
 /* Container for the navigation buttons - ensures they stay within content area */
@@ -110,19 +102,11 @@ a {
 .horizontal-line {
     border-bottom-width: 5px;
     display: block;
-    width: 100%; /* Keep at 100% width */
+    width: 100%; 
     height: 2px; 
+    box-sizing: border-box;
     background-color: #0a0908;
     margin: 20px 0 10px 0; 
-    box-sizing: border-box; /* Include padding in width calculation */
-    position: relative; /* Enable positioning context */
-}
-
-/* Add a new class for containers that need to stretch full width */
-.full-width-container {
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden; /* Prevent overflow issues */
 }
 
 .nav-container {
@@ -131,22 +115,8 @@ a {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    margin: 20px 0; /* Use 0 for left/right to align with content */
-    border-radius: 5px;
-    position: relative; /* Establish positioning context */
-    left: 0; /* Align with parent container */
-    right: 0;
-}
-
-/* Alternative version of nav container for full width layouts */
-.nav-container-full {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
     margin: 20px 0;
-    padding: 0;
+    position: relative;
 }
 
 .nav-button {
@@ -157,12 +127,7 @@ a {
     background: none;
     cursor: pointer;
     transition: color 0.3s;
-    padding: 5px;
     box-sizing: border-box;
-    max-width: 45%; /* Ensure button doesn't get too wide */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .nav-button:hover {
@@ -180,11 +145,11 @@ a {
 @media screen and (min-width: 480px) {
 
     .container, #header {
-        max-width: 85%; /* Adjusted to work with new body padding */
+        max-width: 70%;
     }
 
     .container, #body {
-        max-width: 85%; /* Adjusted to work with new body padding */
+        max-width: 70%;
     }
     
     /* Ensure nav container matches other containers in responsive layout */
