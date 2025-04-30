@@ -3,28 +3,12 @@ body {
     margin: auto;
     padding: 1em;
     max-width: 80ch;
+    min-width: 80ch;
+    width: 100%;
     box-sizing: border-box;
     background-color: #eae0d5;
     color: #0a0908;
 }
-
-/* HEX CODES:
-NAVY BLUE PALETTE
-#001b2e
-#1d3f58
-#537692
-#b3cde4
-#eef3f9
-AQUA PALETTE
-#041421
-#042630
-#4c7273
-#86b9b0
-#d0d6d6
-
-booky palette
-0a0908-22333b-eae0d5-c6ac8f-5e503f
-*/
 
 header {
     text-align: left;
